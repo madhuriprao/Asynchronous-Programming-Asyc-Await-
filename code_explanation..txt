@@ -1,0 +1,40 @@
+Overview: 
+This project is a simple web application that combines a quiz about cats with the ability to fetch advice from the 
+Advice Slip API.The user first answers a quiz question, and upon answering correctly,
+they can input an advice ID to fetch specific advice.
+
+Elements used : 
+#startQuiz: The button to start the quiz.
+#quizContainer: Contains the quiz question and options.
+#adviceContainer: Contains the input for fetching advice.
+
+
+JavaScript (script.js) : 
+
+Event Listeners
+
+Start Quiz Button: When clicked, it triggers the quiz logic.
+- Promise Logic: A Promise is created to handle the quiz. It resolves if the correct answer is given and rejects otherwise.
+- Dynamic Question Display: The quiz question and options are displayed in the HTML.
+
+Fetching Advice
+
+Advice Fetch Button: After the quiz is completed successfully, this button allows the user to fetch advice based on the entered ID.
+- API Fetching Logic: It fetches data from the Advice Slip API. The advice ID is taken from the user input, and an HTTP request is made.
+- Error Handling: If the response is not ok or if no ID is entered, appropriate error messages are displayed.
+
+Code Flow
+
+User Clicks "Start Quiz":
+- The quiz question is displayed.
+- The user selects an answer.
+- Based on the answer, the promise resolves or rejects.
+
+On Successful Quiz Completion:
+- The advice input section appears.
+- The user can enter an advice ID to fetch specific advice.
+
+Advice Fetching:
+- The entered ID is used to fetch data from the Advice Slip API.
+- The retrieved advice is displayed on the page.
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Quiz and Advice Fetcher</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <h1>Cat Quiz and Advice Fetcher</h1>
+    <p>Rule: The user must first correctly answer a quiz question before being allowed to input an advice ID to fetch specific advice. </p>
+
+    <div>
+        <button id="startQuiz">Start Quiz</button>
+    </div>
+
+    <div id="quizContainer" style="display: none;">
+        <h2>Quiz Question</h2>
+        <div id="question"></div>
+        <div id="options"></div>
+        <div id="result"></div>
+    </div>
+
+    <div id="adviceContainer" style="display: none;">
+        <h2>Fetch Advice by ID</h2>
+        <label for="adviceId">Enter Advice ID (1-224):</label>
+        <input type="number" id="adviceId" min="1" max="224" placeholder="Enter ID here">
+        <button id="fetchAdvice">Fetch Advice</button>
+        <div id="advice"></div>
+    </div>
+
+    <script src="promise.js"></script>
+</body>
+</html>
